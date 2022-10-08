@@ -5,6 +5,7 @@ import SectionHero from "../components/organisms/SectionHero";
 import SectionPengembanganBisnis from "../components/organisms/SectionPengembangBisnis";
 import SectionESG from "../components/organisms/SectionESG";
 import SectionBerita from "../components/organisms/SectionBerita";
+import SectionPengumuman from "../components/organisms/SectionPengumuman";
 
 export default function Home() {
   const backgroundImage = [
@@ -36,6 +37,7 @@ export default function Home() {
       <SectionPengembanganBisnis />
       <SectionESG />
       <SectionBerita />
+      <SectionPengumuman />
       <div className="h-[100px]" />
     </>
   );
