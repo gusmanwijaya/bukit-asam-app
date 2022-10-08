@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import { BiCalendar } from "react-icons/bi";
 
-const CardHorizontalScroll = ({ src, title, desc }) => {
-  return (
+const CardHorizontalScroll = ({ src, title, desc, isNews, date }) => {
+  return !isNews ? (
     <div className="bg-gray4 w-[335px] lg:w-[757px] h-[467px] lg:h-[331px] mr-[14px] lg:flex lg:flex-row">
       <div className="px-[18px] py-[26px] lg:py-[45px] lg:px-[0px] lg:pl-[37px]">
         <img
@@ -23,6 +24,25 @@ const CardHorizontalScroll = ({ src, title, desc }) => {
           Selengkapnya
         </p>
       </div>
+    </div>
+  ) : (
+    <div className="w-[260px] h-[250px] mr-[14px]">
+      <img
+        src={src}
+        alt="Illustration"
+        className="w-[260px] h-[146px] object-cover mb-[16px]"
+      />
+      <div className="lg:flex lg:flex-row lg:items-center">
+        <div className="hidden lg:block lg:mr-[10px]">
+          <BiCalendar />
+        </div>
+        <p className="text-[7px] lg:text-[14px] text-blue1 font-poppins font-normal mb-[2px] lg:mb-0">
+          {date}
+        </p>
+      </div>
+      <p className="text-[10px] lg:text-[16px] text-gray2 font-poppins font-normal max-w-[238px] lg:max-w-[379px]">
+        {title}
+      </p>
     </div>
   );
 };

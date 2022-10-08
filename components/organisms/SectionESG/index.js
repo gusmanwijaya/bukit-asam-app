@@ -5,7 +5,7 @@ import Button from "../../atoms/Button";
 
 const SectionESG = () => {
   return (
-    <div className="bg-gray6 px-[30px] 2xl:px-[120px] py-[56px] lg:flex lg:flex-row 2xl:z-0">
+    <div className="bg-gray6 px-[30px] 2xl:px-[105px] py-[56px] lg:flex lg:flex-row 2xl:z-0">
       <div className="flex flex-row items-center justify-between lg:hidden">
         <h1 className="text-[48px] text-blue1 font-poppins font-normal uppercase">
           ESG
