@@ -1,8 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 import React, { useEffect } from "react";
 import Head from "next/head";
 import Header from "../components/molecules/Header";
 import SectionHero from "../components/organisms/SectionHero";
+import SectionPengembanganBisnis from "../components/organisms/SectionPengembangBisnis";
 
 export default function Home() {
   const backgroundImage = [
@@ -12,7 +12,7 @@ export default function Home() {
     },
     {
       url: "/assets/illustration/carousel-2.png",
-      text: "Mendukung Net Zero Emission",
+      text: "Mendukung Net Zero Emission Menuju Energy Bersih Masa Depan",
     },
     {
       url: "/assets/illustration/carousel-3.png",
@@ -31,7 +31,8 @@ export default function Home() {
       </Head>
       <Header />
       <SectionHero backgroundImage={backgroundImage} />
-      <div className="h-[1240px] bg-white"></div>
+      <SectionPengembanganBisnis />
+      <div className="h-[1237px] lg:h-[709px] bg-gray6" />
     </>
   );
 }

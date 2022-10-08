@@ -36,15 +36,15 @@ const SectionHero = ({ backgroundImage }) => {
         transitionTimingFunction: "cubic-bezier(0.4, 0, 1, 1)",
         transitionDuration: "500ms",
       }}
-      className="h-screen w-screen flex flex-col justify-between px-[30px] lg:px-[120px]"
+      className="h-screen w-screen flex flex-col justify-between px-[30px] 2xl:px-[120px]"
     >
-      <div className="pt-[157px] lg:pt-[415px] lg:flex lg:justify-between lg:items-center">
+      <div className="pt-[157px] lg:pt-[250px] 2xl:pt-[415px] lg:flex lg:justify-between lg:items-center">
         <HiOutlineChevronLeft
           className="hidden lg:block w-[38px] h-[38px] text-white opacity-20 cursor-pointer"
           onClick={handlePreviousBackgroundImage}
         />
         <div>
-          <h1 className="text-[46px] font-poppins text-white leading-tight font-light mb-[23px] lg:max-w-[1218px]">
+          <h1 className="text-[46px] font-poppins text-white leading-tight font-light mb-[23px] lg:max-w-[900px] 2xl:max-w-[1218px]">
             {backgroundImage[indexBackgroundImage]?.text}
           </h1>
           <div className="w-[184px] h-[54px] bg-transparent border border-white rounded-[80px] flex justify-center items-center">
@@ -74,8 +74,8 @@ const SectionHero = ({ backgroundImage }) => {
       <div
         className={
           mobileMenu
-            ? "lg:hidden fixed left-0 top-0 w-screen h-screen bg-white px-[30px] pt-[54px] pb-[68px] ease-in duration-500"
-            : "lg:hidden fixed left-[-100%] top-0 px-[30px] pt-[54px] pb-[68px] ease-in duration-500"
+            ? "lg:hidden z-50 fixed left-0 top-0 w-screen h-screen bg-white px-[30px] pt-[54px] pb-[68px] ease-in duration-500"
+            : "lg:hidden z-0 fixed left-[-100%] top-0 px-[30px] pt-[54px] pb-[68px] ease-in duration-500"
         }
       >
         <Header type="mobile-menu" />

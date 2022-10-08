@@ -6,7 +6,7 @@ const Header = ({ type }) => {
 
   useEffect(() => {
     const handleOnChangeScroll = () => {
-      window.scrollY >= 900
+      window.scrollY >= 600
         ? setOnChangeScroll(true)
         : setOnChangeScroll(false);
     };
@@ -27,7 +27,7 @@ const Header = ({ type }) => {
     </div>
   ) : (
     <div
-      className={`fixed left-0 top-0 right-0 py-[54px] lg:py-[16px] px-[30px] lg:px-[120px] ${
+      className={`fixed z-50 left-0 top-0 right-0 py-[54px] lg:py-[16px] px-[30px] 2xl:px-[120px] ${
         onChangeScroll && "bg-white bg-opacity-95"
       }`}
     >
@@ -106,7 +106,7 @@ const Header = ({ type }) => {
             </p>
           </div>
         </div>
-        <div className="hidden lg:flex flex-row items-center space-x-[32px]">
+        <div className="hidden lg:flex flex-row items-center lg:space-x-[32px]">
           <p className="text-yellow1 font-poppins text-[20px] font-normal uppercase cursor-pointer">
             Beranda
           </p>
