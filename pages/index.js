@@ -8,6 +8,7 @@ import SectionBerita from "../components/organisms/SectionBerita";
 import SectionPengumuman from "../components/organisms/SectionPengumuman";
 import SectionTentangKami from "../components/organisms/SectionTentangKami";
 import SectionKarir from "../components/organisms/SectionKarir";
+import SectionFooter from "../components/organisms/SectionFooter";
 
 export default function Home() {
   const backgroundImage = [
@@ -42,6 +43,7 @@ export default function Home() {
       <SectionPengumuman />
       <SectionTentangKami />
       <SectionKarir />
+      <SectionFooter />
     </>
   );
 }
