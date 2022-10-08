@@ -28,7 +28,7 @@ const Header = ({ type }) => {
   ) : (
     <div
       className={`fixed z-50 left-0 top-0 right-0 py-[54px] lg:py-[16px] px-[30px] 2xl:px-[120px] ${
-        onChangeScroll && "bg-white bg-opacity-95"
+        onChangeScroll && "bg-white"
       }`}
     >
       <div className="hidden lg:flex flex-row justify-end items-center space-x-[36px] pr-[78px] mb-[16px]">
