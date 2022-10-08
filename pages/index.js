@@ -6,6 +6,7 @@ import SectionPengembanganBisnis from "../components/organisms/SectionPengembang
 import SectionESG from "../components/organisms/SectionESG";
 import SectionBerita from "../components/organisms/SectionBerita";
 import SectionPengumuman from "../components/organisms/SectionPengumuman";
+import SectionTentangKami from "../components/organisms/SectionTentangKami";
 
 export default function Home() {
   const backgroundImage = [
@@ -38,6 +39,7 @@ export default function Home() {
       <SectionESG />
       <SectionBerita />
       <SectionPengumuman />
+      <SectionTentangKami />
       <div className="h-[100px]" />
     </>
   );

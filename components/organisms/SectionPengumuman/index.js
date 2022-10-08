@@ -56,12 +56,15 @@ const SectionPengumuman = () => {
               <Button text="Selengkapnya" />
             </div>
           </div>
-          <div className="overflow-hidden w-[368px] h-[533px] rounded-lg mt-[31px] lg:hidden">
+          <div className="overflow-hidden w-[368px] h-[533px] rounded-lg mt-[31px] mb-[87px] lg:hidden">
             <img
               src="/assets/illustration/illustration-5.png"
               alt="Illustration"
             />
           </div>
+          <h6 className="text-white text-[48px] font-poppins font-normal uppercase lg:hidden">
+            About Us
+          </h6>
         </div>
       </div>
     </div>
