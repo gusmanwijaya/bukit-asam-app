@@ -4,6 +4,7 @@ import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import Marquee from "react-fast-marquee";
 import Category from "../../atoms/Category";
 import CardHorizontalScroll from "../../molecules/CardHorizontalScroll";
+import Button from "../../atoms/Button";
 
 const SectionPengembanganBisnis = () => {
   return (
@@ -127,11 +128,7 @@ const SectionPengembanganBisnis = () => {
                 sama strategis untuk pengembangan pembangkit & usaha EPC dan
                 O&M.
               </p>
-              <div className="w-[175px] h-[56px] bg-blue1 p-[14px]">
-                <p className="text-center text-white font-poppins text-[18px] font-normal">
-                  Selengkapnya
-                </p>
-              </div>
+              <Button text="Selengkapnya" />
             </div>
           </div>
           <div className="flex flex-row justify-between items-center mb-[86px]">

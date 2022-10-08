@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "../components/molecules/Header";
 import SectionHero from "../components/organisms/SectionHero";
 import SectionPengembanganBisnis from "../components/organisms/SectionPengembangBisnis";
+import SectionESG from "../components/organisms/SectionESG";
 
 export default function Home() {
   const backgroundImage = [
@@ -32,7 +33,8 @@ export default function Home() {
       <Header />
       <SectionHero backgroundImage={backgroundImage} />
       <SectionPengembanganBisnis />
-      <div className="h-[1237px] lg:h-[709px] bg-gray6" />
+      <SectionESG />
+      <div className="h-[100px]" />
     </>
   );
 }
