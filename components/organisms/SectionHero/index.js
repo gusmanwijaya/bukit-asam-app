@@ -58,6 +58,8 @@ const SectionHero = ({ backgroundImage }) => {
           onClick={handleNextBackgroundImage}
         />
       </div>
+
+      {/* START: Icon Burger Mobile */}
       <div className="flex lg:hidden flex-row items-center">
         <img
           src="/assets/illustration/ptba-mobile.png"
@@ -71,6 +73,9 @@ const SectionHero = ({ backgroundImage }) => {
           <img src="/assets/icon/ic-menu-burger.svg" alt="Burger" />
         </div>
       </div>
+      {/* END: Icon Burger Mobile */}
+
+      {/* START: Mobile Menu */}
       <div
         className={
           mobileMenu
@@ -148,6 +153,7 @@ const SectionHero = ({ backgroundImage }) => {
           />
         </div>
       </div>
+      {/* END: Mobile Menu */}
 
       <div className="hidden lg:flex justify-end">
         <img

@@ -1,8 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+import ModalMenuTentang from "../ModalMenuTentang";
 
 const Header = ({ type }) => {
+  const router = useRouter();
   const [onChangeScroll, setOnChangeScroll] = useState(false);
+  const [menuTentang, setMenuTentang] = useState(false);
 
   useEffect(() => {
     const handleOnChangeScroll = () => {
@@ -107,15 +111,33 @@ const Header = ({ type }) => {
           </div>
         </div>
         <div className="hidden lg:flex flex-row items-center lg:space-x-[32px]">
-          <p className="text-yellow1 font-poppins text-[20px] font-normal uppercase cursor-pointer">
-            Beranda
-          </p>
           <p
+            onClick={() => router.replace("/")}
             className={`font-poppins text-[20px] font-normal uppercase cursor-pointer ${
-              onChangeScroll ? "text-gray2" : "text-white"
+              onChangeScroll
+                ? router.pathname === "/"
+                  ? "text-yellow1"
+                  : "text-gray2"
+                : router.pathname === "/"
+                ? "text-yellow1"
+                : "text-white"
             }`}
           >
-            Tentang •
+            Beranda {router.pathname !== "/" && "•"}
+          </p>
+          <p
+            onClick={() => setMenuTentang(!menuTentang)}
+            className={`font-poppins text-[20px] font-normal uppercase cursor-pointer ${
+              onChangeScroll
+                ? router.pathname === "/tentang"
+                  ? "text-yellow1"
+                  : "text-gray2"
+                : router.pathname === "/tentang"
+                ? "text-yellow1"
+                : "text-white"
+            }`}
+          >
+            Tentang {router.pathname !== "/tentang" && "•"}
           </p>
           <p
             className={`font-poppins text-[20px] font-normal uppercase cursor-pointer ${
@@ -159,6 +181,36 @@ const Header = ({ type }) => {
           className="cursor-pointer lg:hidden"
         />
       </div>
+      {menuTentang && (
+        <div className="hidden lg:block lg:bg-gray7 lg:p-[36px] lg:w-full lg:mt-[25px] lg:h-[370px] 2xl:w-[1318px] 2xl:mx-auto rounded-lg">
+          <div className="flex flex-row items-center">
+            <ModalMenuTentang
+              onClick={() => router.replace("/tentang")}
+              title="Profile Perusahaan"
+              desc="Inovasi dan transformasi bagi kami adalah suatu keniscayaan,
+                karena kami ingin meraih masa depan. Dari perusahaan
+                pertambangan batu bara, kami ingin menjadi perusahaan energi
+                kelas dunia,yang peduli lingkungan. Itulah visi kami."
+            />
+            <div className="w-[37px]" />
+            <ModalMenuTentang
+              title="Organisasi"
+              desc="Struktur organisasi yang terdiri dari
+              Struktur Holding, Dewan Komisaris, Dewan Direksi"
+            />
+            <div className="w-[37px]" />
+            <ModalMenuTentang
+              title="Sambutan Direktur Utama"
+              desc="Sejalan dengan visi Perseroan menjadi perusahan energi kelas dunia, Perseroan telah menetapkan beberapa kebijakan strategis termasuk pengembangan kapasitas angkutan dan pelabuhan, bisnis energi berbasis batu bara, renewable energy, dan proyek hilirisasi batu bara."
+            />
+            <div className="w-[37px]" />
+            <ModalMenuTentang
+              title="Penghargaan dan Sertifikasi"
+              desc="PTBA meraih  banyak penghargaan serta sertifikasi dibidang industri pertambangan, dalam berkomitmen perusahaan energi kelas dunia,yang peduli lingkungan."
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
